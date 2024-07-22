@@ -16,4 +16,11 @@
     border: 2px solid black;
     width: 50px;
     height: 50px;
+    transition-delay: .5s;
+    
+}
+
+.container .row div:hover{
+    background-color: lightgreen;
+    transition-delay: 0s;
 }
