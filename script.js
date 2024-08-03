@@ -26,7 +26,11 @@ document.addEventListener("DOMContentLoaded", () =>{
     //Button Dimensions Section
     const button = document.querySelector(".dimensions");
     button.addEventListener("click", () =>{
-        let size = prompt("Input size dimensions");
+        let size = -1
+        while(isNaN(size) || size <= 0 || size > 100)
+        {
+            size = prompt("Input size dimensions from 1-100");
+        }
         createGrid(size, container);
     });
 
