@@ -1,4 +1,5 @@
 document.addEventListener("DOMContentLoaded", () =>{
+    //Render 16 by 16 once DOM is loaded
     const container = document.querySelector(".container");
 
     for (let i = 0; i < 16; i++)
@@ -13,6 +14,15 @@ document.addEventListener("DOMContentLoaded", () =>{
             row.appendChild(box);
         }
     }
+
+    //Button Dimensions Section
+    const button = document.querySelector(".dimensions");
+    button.addEventListener("click", () =>{
+        alert("Hello");
+
+    });
+
+
 
 }
 );
