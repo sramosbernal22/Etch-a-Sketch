@@ -12,10 +12,21 @@ document.addEventListener("DOMContentLoaded", () =>{
                 row.classList.add("row");
                 container.appendChild(row);
                 for (let i = 0; i < size; i++)
-                {
+                {   
                     let box = document.createElement("div");
                     box.classList.add("box");
                     row.appendChild(box);
+                    
+                    box.addEventListener("mouseover",() =>{
+                        var randomColor = "#"+Math.floor(Math.random()*16777215).toString(16);
+                        box.style.backgroundColor = randomColor;
+                    })
+                    box.addEventListener("mouseleave",() =>{
+                        var whiteColor = "#ffffff"
+                        box.style.backgroundColor = whiteColor;
+                    })
+                    
+                    
                 }
             } 
     }
@@ -35,7 +46,7 @@ document.addEventListener("DOMContentLoaded", () =>{
     });
 
 
-
+    
 
 
 }
